@@ -1,0 +1,160 @@
+
+
+
+body {
+    background: linear-gradient(to bottom, white, white);
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #4a4a4a; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 40px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.center-image {
+    display: block;
+    margin: 40px auto 20px auto;
+    border: 5px solid white;  
+    border-radius: 15px;       
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.tab {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #d46a6a, #f9bec7);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: linear-gradient(45deg, #f9bec7, #d46a6a);
+    transform: scale(1.05);              
+    color: white;
+}
+
+.tab-button.active {
+    background-color: #d46a6a;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.team {
+    text-align: left;
+    margin: 60px 0;
+}
+
+.team-member {
+    display : inline-block;
+    width : 200px;
+    max-width : 200px
+}
+
+.team-photo {
+    width: 100%; 
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+.team-message {
+    margin-top: 10px; 
+    font-style: italic; 
+}
+
+.team-role {
+    font-size : 16px;
+    color :#4a4a4a;
+    font-weight : bold;
+}
+
+.service-gallery{
+     display: flex !important;
+    flex-direction: row !important;
+    gap: 30px !important;
+    justify-content: center !important;
+}
+.service-item {
+    text-align: center;
+    width: 200px;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+    transform: scale(1.05);
+}
+
+.service-item p {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #d46a6a;
+}
+
+.service-title {
+    font-weight: 600;
+    color: #d46a6a;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.service-description {
+    color: #000 !important; 
+    font-style : italic;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+h1, p {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        margin: 5px 0;
+    }
+}
+
