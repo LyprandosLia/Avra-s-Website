@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Avra Aesthetic</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <header>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <a href="../index.html">
-    <img src="../logo1.png" alt="Logo" class="logo">
+    <a href="/html/index.html">
+    <img src="/images/logo1.png" alt="Logo" class="logo">
    </a>
     <button class="menu-btn" onclick="openMenu()">☰</button>
   </header>
@@ -19,10 +19,10 @@
   <nav id="sideMenu" class="side-menu">
     <button class="close-btn" onclick="closeMenu()">×</button>
     
-    <a href="homepage/poioiEimaste.html">Ποιοι Είμαστε</a>
+    <a href="/html/poioiEimaste.html">Ποιοι Είμαστε</a>
     
     <!-- Dropdown για Υπηρεσίες -->
-    <button class="dropdown-btn">Υπηρεσίες ▼</button>
+    <button class="dropdown-btn">Υπηρεσίες ▸</button>
     <div class="dropdown-container">
       <a href="homepage/prosopo.html">Πρόσωπο</a>
       <a href="homepage/soma.html">Σώμα</a>
@@ -32,12 +32,14 @@
     <a href="homepage/epikoinonia.html">Επικοινωνία</a>
   </nav>
 
-  <div class="main-content">
-    <img src="image1.avif" alt="Welcome to Avra" class="center-image" width="800" height="400">
-    <h1>Welcome to Avra</h1>
+<section class="hero">
+  <img src="/images/hero.jpg" alt="Beauty Center" class="hero-image">
+  <div class="hero-text">
+    <h1>Welcome to Avra Aesthetic</h1>
     <p>Beauty begins the moment you decide to be yourself</p>
   </div>
+</section>
 
-  <script src="script.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>

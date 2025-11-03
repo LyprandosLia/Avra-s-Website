@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fffafc;
-  color: #333;
+  background-color: #fff8f0; /* nude background */
+  color: #4a3f35; /* ζεστό καφέ για κείμενα */
 }
 
 header {
@@ -10,7 +10,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f8e0e6;
+  background-color: #f3e4d9; /* nude header */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -27,12 +27,13 @@ header {
 
 /* Πλευρικό μενού */
 .side-menu {
+  z-index: 1000;
   height: 100%;
   width: 0;
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #f3d2dc;
+  background-color: #e9d7c6; /* nude side menu */
   overflow-x: hidden;
   transition: 0.4s;
   padding-top: 60px;
@@ -45,7 +46,7 @@ header {
   padding: 15px 30px;
   text-decoration: none;
   font-size: 18px;
-  color: #333;
+  color: #4a3f35;
   transition: 0.3s;
   background: none;
   border: none;
@@ -56,7 +57,7 @@ header {
 
 .side-menu a:hover,
 .dropdown-btn:hover {
-  background-color: #f7e5eb;
+  background-color: #dcc4b3;
 }
 
 /* Κουμπί κλεισίματος */
@@ -73,7 +74,7 @@ header {
 /* Περιεχόμενο υπομενού */
 .dropdown-container {
   display: none;
-  background-color: #f9e9ef;
+  background-color: #f5e6dc;
   padding-left: 30px;
 }
 
@@ -118,7 +119,7 @@ main {
 .team-member {
     display : inline-block;
     width : 200px;
-    max-width : 200px
+    max-width : 200px;
 }
 
 .team-photo {
@@ -133,11 +134,53 @@ main {
 
 .team-role {
     font-size : 16px;
-    color :#4a4a4a;
+    color :#4a3f35;
     font-weight : bold;
 }
 h1, p {
     text-align: center;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;           
+  left: 50%;          
+  transform: translate(-50%, -50%);
+  color: white;       
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  width: 80%;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Μαύρο ημιδιάφανο overlay πάνω από την εικόνα */
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0; width:100%; height:100%;
+  background-color: rgba(0,0,0,0.3); 
+  z-index: 1;
 }
 
 /* Responsive Design */
@@ -151,6 +194,7 @@ h1, p {
         margin: 5px 0;
     }
 }
+
 /* Για κινητά */
 @media (max-width: 768px) {
   .logo {
