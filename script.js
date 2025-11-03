@@ -1,15 +1,18 @@
-const tabs = document.querySelectorAll('.tab-button');
-const contents = document.querySelectorAll('.tab-content');
+// Άνοιγμα / κλείσιμο μενού
+function openMenu() {
+  document.getElementById("sideMenu").style.width = "250px";
+}
 
+function closeMenu() {
+  document.getElementById("sideMenu").style.width = "0";
+}
 
-tabs.forEach(tab =>{
-    tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+// Dropdown λειτουργία
+const dropdowns = document.getElementsByClassName("dropdown-btn");
 
-        contents.forEach(c=> c.classList.remove('active'));
-
-        const activeContent = document.getElementById(tab.dataset.target);
-        activeContent.classList.add('active');
-    });
-});
+for (let i = 0; i < dropdowns.length; i++) {
+  dropdowns[i].addEventListener("click", function() {
+    const dropdown = this.nextElementSibling;
+    dropdown.classList.toggle("dropdown-active");
+  });
+}

@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <title>Avra Aesthetic</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Avra Aesthetic</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
-    <header>
-    <img src="logo1.png" alt = "Logo" class="logo">
-    
-    <nav class="nav-tabs">
-      <a href="homepage/poioiEimaste.html" class="tab">Ποιοι Είμαστε</a>
-      <a href="homepage/ypiresies.html" class ="tab">Υπηρεσίες</a>
-      <a href="homepage/epikoinonia.html" class = "tab">Επικοινωνία</a>
-    </nav>
-    </header>
+  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="../index.html">
+    <img src="../logo1.png" alt="Logo" class="logo">
+   </a>
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+  </header>
 
+  <!-- Πλευρικό μενού -->
+  <nav id="sideMenu" class="side-menu">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    
+    <a href="homepage/poioiEimaste.html">Ποιοι Είμαστε</a>
+    
+    <!-- Dropdown για Υπηρεσίες -->
+    <button class="dropdown-btn">Υπηρεσίες ▼</button>
+    <div class="dropdown-container">
+      <a href="homepage/prosopo.html">Πρόσωπο</a>
+      <a href="homepage/soma.html">Σώμα</a>
+      <a href="homepage/laser.html">Laser</a>
+    </div>
+    
+    <a href="homepage/epikoinonia.html">Επικοινωνία</a>
+  </nav>
+
+  <div class="main-content">
     <img src="image1.avif" alt="Welcome to Avra" class="center-image" width="800" height="400">
-
     <h1>Welcome to Avra</h1>
     <p>Beauty begins the moment you decide to be yourself</p>
+  </div>
 
-
-
-  <script src="script.js"></script> 
+  <script src="script.js"></script>
 </body>
 </html>

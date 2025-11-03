@@ -8,15 +8,28 @@
 
 <body>
     <header>
-        <img src="../logo1.png" alt="Logo" class="logo">
-
-        <nav class="nav-tabs">
-            <a href="../index.html" class = "tab">Αρχική</a>
-            <a href="ypiresies.html" class="tab">Υπηρεσίες</a>
-            <a href="epikoinonia.html" class = "tab">Επικοινωνία</a>
-        </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <a href="../index.html">
+    <img src="../logo1.png" alt="Logo" class="logo">
+    </a>
+        <button class="menu-btn" onclick="openMenu()">☰</button>
     </header>
-
+      <nav id="sideMenu" class="side-menu">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    
+    
+   <!-- Dropdown για Υπηρεσίες -->
+    <a href="../index.html">Αρχική</a>
+    <button class="dropdown-btn">Υπηρεσίες ▼</button>
+    <div class="dropdown-container">
+      <a href="prosopo.html">Πρόσωπο</a>
+      <a href="soma.html">Σώμα</a>
+      <a href="laser.html">Laser</a>
+    </div>
+    <a href="epikoinonia.html">Επικοινωνία</a>
+  </nav>
+    
+  </nav>
     <main>
         <h1>Ποιοι Είμαστε</h1>
         <p>
@@ -33,5 +46,6 @@
             </div>
         </section>
     </main>
+    <script src="../script.js"></script>
 </body>
 </html>
