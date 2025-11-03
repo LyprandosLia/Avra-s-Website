@@ -24,3 +24,34 @@ dropdowns.forEach(btn => {
   });
 });
 
+const images = document.querySelectorAll('.carousel-images img');
+const dots = document.querySelectorAll('.dot');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let current = 0;
+
+function showImage(index) {
+  images.forEach(img => img.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  images[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+prev.addEventListener('click', () => {
+  current = (current === 0) ? images.length - 1 : current - 1;
+  showImage(current);
+});
+
+next.addEventListener('click', () => {
+  current = (current === images.length - 1) ? 0 : current + 1;
+  showImage(current);
+});
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    current = index;
+    showImage(current);
+  });
+});
+
+showImage(current);
